@@ -1,4 +1,4 @@
-package com.david.fastdevandroid.okgohtp.callback;
+package com.david.fastdevandroid.okgohttp.callback;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -7,7 +7,7 @@ import android.support.annotation.Nullable;
 import android.view.Window;
 
 
-import com.david.fastdevandroid.okgohtp.ApiException;
+import com.david.fastdevandroid.okgohttp.ApiException;
 import com.david.fastdevandroid.utils.ToastUtils;
 import com.google.gson.Gson;
 import com.lzy.okgo.OkGo;

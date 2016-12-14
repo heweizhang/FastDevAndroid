@@ -1,4 +1,4 @@
-package com.david.fastdevandroid.okgohtp;
+package com.david.fastdevandroid.okgohttp;
 
 import com.david.fastdevandroid.utils.LogUtil;
 

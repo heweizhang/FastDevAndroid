@@ -1,4 +1,4 @@
-package com.david.fastdevandroid.okgohtp;
+package com.david.fastdevandroid.okgohttp;
 
 /**
  * Created by Administrator on 2016/10/17.

@@ -1,10 +1,10 @@
-package com.david.fastdevandroid.okgohtp;
+package com.david.fastdevandroid.okgohttp;
 
 import android.content.Context;
 
 
-import com.david.fastdevandroid.okgohtp.callback.JsonCallback;
-import com.david.fastdevandroid.okgohtp.callback.JsonDialogCallback;
+import com.david.fastdevandroid.okgohttp.callback.JsonCallback;
+import com.david.fastdevandroid.okgohttp.callback.JsonDialogCallback;
 import com.david.fastdevandroid.utils.LogUtil;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.cache.CacheMode;

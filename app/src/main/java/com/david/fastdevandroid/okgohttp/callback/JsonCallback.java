@@ -1,9 +1,9 @@
-package com.david.fastdevandroid.okgohtp.callback;
+package com.david.fastdevandroid.okgohttp.callback;
 
 import android.app.Activity;
 
 
-import com.david.fastdevandroid.okgohtp.ApiException;
+import com.david.fastdevandroid.okgohttp.ApiException;
 import com.david.fastdevandroid.utils.ToastUtils;
 import com.google.gson.Gson;
 import com.lzy.okgo.callback.AbsCallback;
