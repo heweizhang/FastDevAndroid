@@ -1,16 +1,19 @@
 package com.david.fastdevandroid.mvp.presenter.impl;
 
 
-
 import com.david.fastdevandroid.mvp.base.BasePresenter;
 import com.david.fastdevandroid.mvp.presenter.IMainActivityPresenter;
 import com.david.fastdevandroid.mvp.view.MainActivity;
+import com.david.fastdevandroid.utils.LogUtil;
+import com.trello.rxlifecycle.android.ActivityEvent;
 
 import java.util.concurrent.TimeUnit;
 
 import rx.Observable;
+import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Func1;
+import rx.schedulers.Schedulers;
 
 
 /**
@@ -25,14 +28,19 @@ public class MainActivityPresenter extends BasePresenter<MainActivity> implement
                 .map(new Func1<Long, Object>() {
                     @Override
                     public Object call(Long aLong) {
-                        if (getView() == null) {
+                  /*      if (getView() == null) {
                             return null;
-                        } else
-                            getView().setText(str);
+                        } else*/
+                        getView().setText(str);
                         return null;
                     }
-                }).subscribe();
+                })
+//                .compose(getView().bindToLifecycle())//完成Observable发布的事件和当前的组件绑定，实现生命周期同步。从而实现当前组件生命周期结束时，自动取消对Observable订阅。
+                .compose(getView().bindUntilEvent(ActivityEvent.DESTROY))//绑定到lifeCycle后，Activity Ondestory时 会自动停止订阅，
+                .subscribe();
 
     }
+
+
 
 }

@@ -35,7 +35,6 @@ public class MainActivity extends MVPBaseActivity<MainActivity, MainActivityPres
         tv_msg.setText(s);
     }
 
-
     @Override
     protected MainActivityPresenter createPresenter() {
         return presenter;
