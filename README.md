@@ -9,9 +9,10 @@
 ```
 compile 'com.lzy.net:okgo:+'
 ```
-自定义网络请求CallBack：
-1、带Dialog提示的post请求
-2、不带Dialog提示的post请求
+自定义网络请求CallBack：  
+1、带Dialog提示的post请求  
+2、不带Dialog提示的post请求  
+
 
 #### 3、图片框架使用谷歌亲儿子 Glide
 ```
