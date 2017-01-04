@@ -20,7 +20,7 @@ import rx.functions.Func1;
 public class MainActivityPresenter extends BasePresenter<MainActivity> implements IMainActivityPresenter {
 
     @Override
-    public void loadImage(String url) {
+    public void delaytask(final String str) {
         Observable.timer(3000, TimeUnit.MILLISECONDS, AndroidSchedulers.mainThread())
                 .map(new Func1<Long, Object>() {
                     @Override
@@ -28,7 +28,7 @@ public class MainActivityPresenter extends BasePresenter<MainActivity> implement
                         if (getView() == null) {
                             return null;
                         } else
-                            getView().setText("3s前预定了我的显示~");
+                            getView().setText(str);
                         return null;
                     }
                 }).subscribe();

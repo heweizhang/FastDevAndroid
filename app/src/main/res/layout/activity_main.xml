@@ -14,7 +14,7 @@
         android:id="@+id/btn_show_toast"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SHOW TOAST"/>
+        android:text="定时"/>
 
     <TextView
         android:id="@+id/tv_msg"

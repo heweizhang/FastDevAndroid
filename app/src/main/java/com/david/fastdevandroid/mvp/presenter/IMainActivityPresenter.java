@@ -5,5 +5,5 @@ package com.david.fastdevandroid.mvp.presenter;
  */
 
 public interface IMainActivityPresenter {
-    public void loadImage(String url);
+    public void delaytask(String str);
 }

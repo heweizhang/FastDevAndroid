@@ -14,6 +14,7 @@ public class MainActivity extends MVPBaseActivity<MainActivity, MainActivityPres
     private MainActivityPresenter presenter = new MainActivityPresenter();
 
     private TextView tv_msg;
+    private String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +25,7 @@ public class MainActivity extends MVPBaseActivity<MainActivity, MainActivityPres
         findViewById(R.id.btn_show_toast).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                presenter.loadImage("GOOD MORNINIG~");
+                presenter.delaytask("3s前预定了我的显示~");
             }
         });
 
