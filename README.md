@@ -17,4 +17,9 @@ compile 'com.lzy.net:okgo:+'
 ```
 compile 'com.github.bumptech.glide:glide:3.7.0'
 ```
+
+#### 4、使用 rxlifecycle 管理生命周期
+```
+compile 'com.trello:rxlifecycle-components:1.0'
+```
 本项目更新中...

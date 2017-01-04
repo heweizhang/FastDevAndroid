@@ -3,7 +3,7 @@ package com.david.fastdevandroid.utils;
 /**
  * Created by Administrator on 2016/8/18.
  */
-public class TextUtils {
+public class TelUtils {
     /**
      * 将讲话号码处理成中间带*号
      * 如：1865****333
