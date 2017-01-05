@@ -23,4 +23,25 @@ compile 'com.github.bumptech.glide:glide:3.7.0'
 ```
 compile 'com.trello:rxlifecycle-components:1.0'
 ```
+
+#### 5、使用 ButterKnife 注解来快速绑定view，从而避免无止境的findViewById();
+ButterKnife github 地址:[https://github.com/JakeWharton/butterknife/](https://github.com/JakeWharton/butterknife/)
+框架引入：
+
+```
+一、app gradle中添加：
+apply plugin: 'com.jakewharton.butterknife'
+
+dependencies {
+    compile 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+}
+
+
+二、Project gradle中添加：
+dependencies {
+    classpath 'com.jakewharton:butterknife-gradle-plugin:8.4.0'
+}
+
+```
 本项目更新中...

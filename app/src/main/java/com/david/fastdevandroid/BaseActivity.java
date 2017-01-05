@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.annotation.CallSuper;
 import android.support.annotation.CheckResult;
+import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -15,6 +16,7 @@ import com.trello.rxlifecycle.RxLifecycle;
 import com.trello.rxlifecycle.android.ActivityEvent;
 import com.trello.rxlifecycle.android.RxLifecycleAndroid;
 
+import butterknife.ButterKnife;
 import rx.Observable;
 import rx.subjects.BehaviorSubject;
 
@@ -24,12 +26,20 @@ import rx.subjects.BehaviorSubject;
  * 由于RxActivity 直接继承与Activity
  * 因此BaseActivity直接继承RxActivity并不方便，所以我们直接实现LifecycleProvider<ActivityEvent>接口，
  * 拷贝RxActivity方法
+ *
+ * 基类中绑定ButterKnife，就不用在子类中重复初始化
  */
 
 public class BaseActivity extends AppCompatActivity implements LifecycleProvider<ActivityEvent> {
     @Override
     public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
         super.onCreate(savedInstanceState, persistentState);
+    }
+
+    @Override
+    public void setContentView(@LayoutRes int layoutResID) {
+        super.setContentView(layoutResID);
+        ButterKnife.bind(this);
 
     }
 
