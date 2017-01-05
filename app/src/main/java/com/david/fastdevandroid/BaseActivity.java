@@ -31,9 +31,12 @@ import rx.subjects.BehaviorSubject;
  */
 
 public class BaseActivity extends AppCompatActivity implements LifecycleProvider<ActivityEvent> {
+    protected String TAG = "";
+
     @Override
     public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
         super.onCreate(savedInstanceState, persistentState);
+        TAG = this.getClass().getSimpleName().toString();
     }
 
     @Override

@@ -26,6 +26,7 @@ compile 'com.trello:rxlifecycle-components:1.0'
 
 #### 5、使用 ButterKnife 注解来快速绑定view，从而避免无止境的findViewById();
 ButterKnife github 地址:[https://github.com/JakeWharton/butterknife/](https://github.com/JakeWharton/butterknife/)
+
 框架引入：
 
 ```
@@ -44,4 +45,7 @@ dependencies {
 }
 
 ```
+#### 6、封装BaseAdapter，BaseViewHolder，使用RecycleView变得轻松;
+目前仅支持单种item的Adapter
+
 本项目更新中...

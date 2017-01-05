@@ -5,6 +5,7 @@ package com.david.fastdevandroid.mvp.presenter;
  */
 
 public interface IMainActivityPresenter {
-    public void delaytask(String str);
+    public void getFuncData();
 
+    public void getIntentTarget(int position);
 }
