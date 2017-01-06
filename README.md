@@ -48,4 +48,7 @@ dependencies {
 #### 6、封装BaseAdapter，BaseViewHolder，使用RecycleView变得轻松;
 目前仅支持单种item的Adapter
 
+
+#### 7、接入greenDAO3,数据库操作更优雅，配置迁移，版本更新数据不再丢失;
+[greenDAO3接入教程](http://www.jianshu.com/p/793f77feeb89)
 本项目更新中...

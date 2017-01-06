@@ -2,6 +2,8 @@ package com.david.fastdevandroid;
 
 import android.app.Application;
 
+import com.david.fastdevandroid.greendao.GreenDaoHelper;
+
 /**
  * Created by Administrator on 2016/12/14.
  */
@@ -17,5 +19,7 @@ public class AppContext extends Application {
     public void onCreate() {
         super.onCreate();
         instance = this;
+
+        GreenDaoHelper.initDatabase(this);//初始化greenDAO
     }
 }
