@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 
 import com.david.fastdevandroid.BaseActivity;
+import com.lzy.okgo.OkGo;
 
 
 public abstract class MVPBaseActivity<V, T extends BasePresenter<V>> extends BaseActivity {
@@ -49,6 +50,12 @@ public abstract class MVPBaseActivity<V, T extends BasePresenter<V>> extends Bas
     @Override
     protected void onDestroy() {
         super.onDestroy();
+
+        /**
+         *  子activity退出时 取消相应网络请求
+         */
+        OkGo.getInstance().cancelTag(this.getClass().getSimpleName());
+
         if (mPresenter.isViewAttached()) {
             mPresenter.detachView();
             mPresenter.onDestroy();

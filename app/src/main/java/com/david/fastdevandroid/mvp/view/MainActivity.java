@@ -10,7 +10,7 @@ import com.david.fastdevandroid.adapter.FuncAdapter;
 import com.david.fastdevandroid.adapter.base.OnViewClickListener;
 import com.david.fastdevandroid.mvp.base.MVPBaseActivity;
 import com.david.fastdevandroid.mvp.presenter.impl.MainActivityPresenter;
-import com.david.fastdevandroid.utils.LogUtil;
+
 
 import java.util.List;
 
