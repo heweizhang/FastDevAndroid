@@ -7,6 +7,7 @@ import com.david.fastdevandroid.okgohttp.HttpHandler;
 import com.david.fastdevandroid.okgohttp.callback.JsonCallback;
 import com.david.fastdevandroid.okgohttp.callback.JsonDialogCallback;
 import com.david.fastdevandroid.okgohttp.entity.BannerBean;
+import com.david.fastdevandroid.okgohttp.entity.User;
 import com.david.fastdevandroid.utils.MD5Utils;
 
 import java.util.HashMap;
@@ -33,12 +34,14 @@ public class HttpActivityPresenter extends BasePresenter<HttpActivity> {
         });
     }
 
+
     public void postWithDialogRequest() {
         Map<String, String> map = new HashMap<>();
-        map.put("encodestr", MD5Utils.ecodeTwice("get_bannerview"));
-        HttpHandler.getInstance(getView()).postRequest(map, HttpApis.GET_BANNERVIEW, new JsonDialogCallback<List<BannerBean>>(getView()) {
+
+        map.put("name", "Davids");
+        HttpHandler.getInstance(getView()).postRequest(map, HttpApis.MYSERVICETEST, new JsonDialogCallback<List<User>>(getView()) {
             @Override
-            public void onSuccess(List<BannerBean> bannerBeen, Call call, Response response) {
+            public void onSuccess(List<User> bannerBeen, Call call, Response response) {
                 getView().setReustText("Post with Dialog" + bannerBeen.get(0).toString());
             }
         });
