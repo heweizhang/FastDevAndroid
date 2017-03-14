@@ -51,9 +51,9 @@ dependencies {
     /* rxjava相关 */
     compile 'io.reactivex:rxjava:1.1.7'
     compile 'io.reactivex:rxandroid:1.2.1'
-    compile 'com.squareup.retrofit2:retrofit:2.1.0'
-    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
-    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+//    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+//    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+//    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
     compile 'com.trello:rxlifecycle:1.0'
     compile 'com.trello:rxlifecycle-components:1.0'
 
@@ -62,6 +62,7 @@ dependencies {
 
     /* 基于okhttp的网络框架 */
     compile 'com.lzy.net:okgo:+'
+    compile 'com.google.code.gson:gson:2.5'
 
     /* 图片加载框架 */
     compile 'com.github.bumptech.glide:glide:3.7.0'

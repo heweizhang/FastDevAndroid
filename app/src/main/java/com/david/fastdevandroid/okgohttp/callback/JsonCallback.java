@@ -43,9 +43,6 @@ public abstract class JsonCallback<T> extends AbsCallback<T> {
         int code = jsonObject.getInt("errcode");
         if (code != 0) {
             throw new ApiException("wifipackage" + jsonObject.getString("error_message"));
-//            throw new ApiException(jsonObject.getString("error_message"));
-            /*ToastUtils.show(activity, jsonObject.getString("error_message"));
-            return null;*/
         }
 
         Gson gson = new Gson();
@@ -58,16 +55,12 @@ public abstract class JsonCallback<T> extends AbsCallback<T> {
     @Override
     public void onError(Call call, Response response, Exception e) {
         super.onError(call, response, e);
-//        LogUtil.e("info", "code:" + response.code());
         if (e != null) {
             if ((response != null && response.code() == 404) || (response != null && response.code() == 500)) {
                 ToastUtils.show(activity, "服务器未响应，请联系管理员...");
 
-            } else if (e.getMessage() != null && e.getMessage().startsWith("xindong")) {//自定义异常
+            } else if (e.getMessage() != null && e.getMessage().startsWith("wifipackage")) {//自定义异常
                 ToastUtils.show(activity, e.getMessage().substring(11, e.getMessage().length()));
-                if (e.getMessage().substring(11, e.getMessage().length()).equals("身份过期，请重新登录")) {
-//                    SharedPreferencesUtils.getInstance(activity).setToUnLogined();
-                }
             } else {
                 ToastUtils.show(activity, "连接中断，请检查网络...");
             }
